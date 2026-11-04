@@ -39,7 +39,7 @@
       <img src="icon-96.png" alt="">
       <div>
         <h1>LGT</h1>
-        <p class="version">Version 0.1.0 · Firefox add-on</p>
+        <p class="version">Version 0.1.1 · Firefox add-on</p>
       </div>
     </header>
 
@@ -58,15 +58,20 @@
     <h2>If that doesn't work</h2>
     <p>Right-click the button, choose <strong>Save Link As…</strong>, then drag the saved file onto a Firefox window, or use <code>about:addons</code> → gear icon → <strong>Install Add-on From File…</strong>.</p>
 
-    <h2>What's new in 0.1.0</h2>
+    <h2>What's new in 0.1.1</h2>
     <ul>
-<li>First version: checks your LinkedIn connections&#39; results in all LinkedIn games every 15 minutes and shows them in a dashboard, with today&#39;s leaderboards and a history per game.</li>
-<li>Optional public board: an encrypted web page with the same rankings, to open in any browser with a passphrase.</li>
+<li>Fixes the check failing for every game with &quot;LinkedIn changed the board query (HTTP 400)&quot;: LGT sent the game&#39;s id in a form LinkedIn doesn&#39;t accept.</li>
+<li>When several games fail with the same error, the message is shown once.</li>
 </ul>
 
     <details>
       <summary>Earlier versions</summary>
-      
+      <h3>0.1.0</h3>
+<ul>
+<li>First version: checks your LinkedIn connections&#39; results in all LinkedIn games every 15 minutes and shows them in a dashboard, with today&#39;s leaderboards and a history per game.</li>
+<li>Optional public board: an encrypted web page with the same rankings, to open in any browser with a passphrase.</li>
+</ul>
+
     </details>
 
     <hr>
