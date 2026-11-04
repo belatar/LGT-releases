@@ -1,0 +1,13 @@
+{
+  "addons": {
+    "{2f72dd15-915c-40e2-afe0-5f0bd217650a}": {
+      "updates": [
+        {
+          "version": "0.1.0",
+          "update_link": "https://github.com/belatar/LGT-releases/releases/download/0.1.0/lgt-0.1.0.xpi",
+          "update_hash": "sha256:c64a391aabb6797e6e64937c10eec5b11fa4d492d5cd31338928da19543b5418"
+        }
+      ]
+    }
+  }
+}
