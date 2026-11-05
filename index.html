@@ -39,13 +39,13 @@
       <img src="icon-96.png" alt="">
       <div>
         <h1>LGT</h1>
-        <p class="version">Version 0.1.5 · Firefox add-on</p>
+        <p class="version">Version 0.1.6 · Firefox add-on</p>
       </div>
     </header>
 
     <p>Tracks how your LinkedIn connections do in the daily LinkedIn games: a dashboard for today and a history per game. Unofficial, not affiliated with LinkedIn.</p>
 
-    <a class="install" href="lgt.xpi?v=0.1.5">Install in Firefox</a>
+    <a class="install" href="lgt.xpi?v=0.1.6">Install in Firefox</a>
     <p class="muted">Signed by Mozilla. Firefox updates it automatically after the first install.</p>
 
     <h2>Installing</h2>
@@ -58,16 +58,21 @@
     <h2>If that doesn't work</h2>
     <p>Right-click the button, choose <strong>Save Link As…</strong>, then drag the saved file onto a Firefox window, or use <code>about:addons</code> → gear icon → <strong>Install Add-on From File…</strong>.</p>
 
-    <h2>What's new in 0.1.5</h2>
+    <h2>What's new in 0.1.6</h2>
     <ul>
+<li>Home checker: asks LinkedIn for English answers, like an English browser does. Pinpoint and Crossclimb results were missing on the board, probably because LinkedIn answered the container in German.</li>
+</ul>
+
+    <details>
+      <summary>Earlier versions</summary>
+      <h3>0.1.5</h3>
+<ul>
 <li>Times are always shown in 24-hour format.</li>
 <li>The public board shows, in German, when LinkedIn&#39;s games reset (midnight Pacific time, with your local time), and that Pinpoint, Crossclimb and Wend are only available with LinkedIn set to English.</li>
 <li>Home checker: updates itself. Every release now also builds its Docker image, and a daily task on the NAS downloads new versions and restarts the container. Setting it up once is described in the README (a read-only token and the task); after that, no more copying files and rebuilding.</li>
 </ul>
 
-    <details>
-      <summary>Earlier versions</summary>
-      <h3>0.1.4</h3>
+<h3>0.1.4</h3>
 <ul>
 <li>The public board is only re-published when results actually change, instead of after every check.</li>
 <li>Behind the scenes: the checks and the board upload are now shared with the new home checker, which can run the checks and publish the board around the clock from a Docker container at home (for example a Synology NAS). See the README.</li>
