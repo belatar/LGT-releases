@@ -39,13 +39,13 @@
       <img src="icon-96.png" alt="">
       <div>
         <h1>LGT</h1>
-        <p class="version">Version 0.1.7 · Firefox add-on</p>
+        <p class="version">Version 0.1.8 · Firefox add-on</p>
       </div>
     </header>
 
     <p>Tracks how your LinkedIn connections do in the daily LinkedIn games: a dashboard for today and a history per game. Unofficial, not affiliated with LinkedIn.</p>
 
-    <a class="install" href="lgt.xpi?v=0.1.7">Install in Firefox</a>
+    <a class="install" href="lgt.xpi?v=0.1.8">Install in Firefox</a>
     <p class="muted">Signed by Mozilla. Firefox updates it automatically after the first install.</p>
 
     <h2>Installing</h2>
@@ -58,14 +58,21 @@
     <h2>If that doesn't work</h2>
     <p>Right-click the button, choose <strong>Save Link As…</strong>, then drag the saved file onto a Firefox window, or use <code>about:addons</code> → gear icon → <strong>Install Add-on From File…</strong>.</p>
 
-    <h2>What's new in 0.1.7</h2>
+    <h2>What's new in 0.1.8</h2>
     <ul>
-<li>The board shows the LGT version in the bottom right corner of the window.</li>
+<li>The board&#39;s note now names only Pinpoint and Crossclimb as needing LinkedIn in English.</li>
+<li>Home checker: the log now shows up in Synology&#39;s Container Manager (Container → lgt → Log). Copy the new <code>docker-compose.yml</code> to the NAS once; the daily task then picks it up.</li>
+<li>README: exactly which files the NAS folder needs.</li>
 </ul>
 
     <details>
       <summary>Earlier versions</summary>
-      <h3>0.1.6</h3>
+      <h3>0.1.7</h3>
+<ul>
+<li>The board shows the LGT version in the bottom right corner of the window.</li>
+</ul>
+
+<h3>0.1.6</h3>
 <ul>
 <li>Home checker: asks LinkedIn for English answers, like an English browser does. Pinpoint and Crossclimb results were missing on the board, probably because LinkedIn answered the container in German.</li>
 </ul>
