@@ -39,13 +39,13 @@
       <img src="icon-96.png" alt="">
       <div>
         <h1>LGT</h1>
-        <p class="version">Version 0.1.9 · Firefox add-on</p>
+        <p class="version">Version 0.2.0 · Firefox add-on</p>
       </div>
     </header>
 
     <p>Tracks how your LinkedIn connections do in the daily LinkedIn games: a dashboard for today and a history per game. Unofficial, not affiliated with LinkedIn.</p>
 
-    <a class="install" href="lgt.xpi?v=0.1.9">Install in Firefox</a>
+    <a class="install" href="lgt.xpi?v=0.2.0">Install in Firefox</a>
     <p class="muted">Signed by Mozilla. Firefox updates it automatically after the first install.</p>
 
     <h2>Installing</h2>
@@ -58,16 +58,23 @@
     <h2>If that doesn't work</h2>
     <p>Right-click the button, choose <strong>Save Link As…</strong>, then drag the saved file onto a Firefox window, or use <code>about:addons</code> → gear icon → <strong>Install Add-on From File…</strong>.</p>
 
-    <h2>What's new in 0.1.9</h2>
+    <h2>What's new in 0.2.0</h2>
     <ul>
+<li>Your own result shows up even when LinkedIn&#39;s leaderboard doesn&#39;t list you yet (it&#39;s often hours late for Pinpoint and Crossclimb), with &quot;–&quot; instead of a rank until LinkedIn ranks you.</li>
+<li>Connections who didn&#39;t solve a puzzle show &quot;failed&quot; instead of &quot;not yet&quot;, and count as played in History.</li>
+<li>Settings → Advanced: a field for the new &quot;own results&quot; query, in case LinkedIn changes it.</li>
+</ul>
+
+    <details>
+      <summary>Earlier versions</summary>
+      <h3>0.1.9</h3>
+<ul>
 <li>Home checker: no longer re-uploads an unchanged board after a restart.</li>
 <li>Home checker: the log&#39;s times are German time (<code>TZ</code> in <code>.env</code> for another time zone).</li>
 <li>README: the NAS update task runs every hour (how to set it up in Task Scheduler), and what to do when Container Manager shows the old container after an update.</li>
 </ul>
 
-    <details>
-      <summary>Earlier versions</summary>
-      <h3>0.1.8</h3>
+<h3>0.1.8</h3>
 <ul>
 <li>The board&#39;s note now names only Pinpoint and Crossclimb as needing LinkedIn in English.</li>
 <li>Home checker: the log now shows up in Synology&#39;s Container Manager (Container → lgt → Log). Copy the new <code>docker-compose.yml</code> to the NAS once; the daily task then picks it up.</li>
@@ -129,8 +136,8 @@
 <h2>Using it</h2>
 <ul>
 <li>Click the toolbar icon to open the dashboard. LGT checks LinkedIn every 15 minutes while Firefox is open (⟳ checks right away).</li>
-<li><strong>Today</strong>: a card per game with your connections&#39; results for today&#39;s puzzle: rank, time and ✦ for a flawless solve (no hints, no mistakes). Your row is highlighted. Connections who haven&#39;t played yet are listed greyed out at the bottom.</li>
-<li><strong>History</strong>: pick a game to see the standings over all days LGT has seen (played, wins, average rank, best and average time) and every day&#39;s top 3 with your own result. History starts on the day you install LGT.</li>
+<li><strong>Today</strong>: a card per game with your connections&#39; results for today&#39;s puzzle: rank, time and ✦ for a flawless solve (no hints, no mistakes). Your row is highlighted. Connections who didn&#39;t solve the puzzle show &quot;failed&quot;; those who haven&#39;t played yet are listed greyed out at the bottom. LinkedIn sometimes fills a leaderboard hours late (often Pinpoint and Crossclimb): until it lists you, your own result is shown anyway, with &quot;–&quot; instead of a rank.</li>
+<li><strong>History</strong>: pick a game to see the standings over all days LGT has seen (played, wins, average rank, best and average time; failed and not-yet-ranked days count as played, but not for wins and rank) and every day&#39;s top 3 with your own result. History starts on the day you install LGT.</li>
 <li>LinkedIn may only show a game&#39;s connections leaderboard once you&#39;ve played that game yourself, so if a card stays empty, play it first.</li>
 <li><strong>Settings</strong> (⚙ in the dashboard): check interval, the hidden helper tab, and the public board.</li>
 <li><strong>Public board</strong>: publishes the rankings as an encrypted web page you can open in any browser, for example on your phone. Turn it on under Settings → Public board with a GitHub repository (with GitHub Pages turned on), a fine-grained token for it (Contents: Read and write) and a passphrase. The board page asks for the passphrase and can remember it on that device. Only the encrypted results and the page itself are uploaded, never your LinkedIn login, and the page shows initials instead of profile photos.</li>

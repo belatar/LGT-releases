@@ -3,6 +3,11 @@
     "{2f72dd15-915c-40e2-afe0-5f0bd217650a}": {
       "updates": [
         {
+          "version": "0.2.0",
+          "update_link": "https://github.com/belatar/LGT-releases/releases/download/0.2.0/lgt-0.2.0.xpi",
+          "update_hash": "sha256:ebfff63af60204727bddabd76aaf4577f12ff50d3198297e330502935cd24216"
+        },
+        {
           "version": "0.1.9",
           "update_link": "https://github.com/belatar/LGT-releases/releases/download/0.1.9/lgt-0.1.9.xpi",
           "update_hash": "sha256:de52ab049904aa42c241cee3d4c24dbe64c6b82f1acc62f4bee29e8c311a7839"
