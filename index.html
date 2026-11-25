@@ -39,13 +39,13 @@
       <img src="icon-96.png" alt="">
       <div>
         <h1>LGT</h1>
-        <p class="version">Version 0.3.2 · Firefox add-on</p>
+        <p class="version">Version 0.4.0 · Firefox add-on</p>
       </div>
     </header>
 
     <p>Tracks how your LinkedIn connections do in the daily LinkedIn games: a dashboard for today and a history per game. Unofficial, not affiliated with LinkedIn.</p>
 
-    <a class="install" href="lgt.xpi?v=0.3.2">Install in Firefox</a>
+    <a class="install" href="lgt.xpi?v=0.4.0">Install in Firefox</a>
     <p class="muted">Signed by Mozilla. Firefox updates it automatically after the first install.</p>
 
     <h2>Installing</h2>
@@ -58,15 +58,20 @@
     <h2>If that doesn't work</h2>
     <p>Right-click the button, choose <strong>Save Link As…</strong>, then drag the saved file onto a Firefox window, or use <code>about:addons</code> → gear icon → <strong>Install Add-on From File…</strong>.</p>
 
-    <h2>What's new in 0.3.2</h2>
+    <h2>What's new in 0.4.0</h2>
     <ul>
-<li>New game: <strong>Sumbreak</strong>. LinkedIn doesn&#39;t list it with the other games yet, so LGT adds it itself (one puzzle a day since #1 on 18 November).</li>
-<li>Your own result without a time (LinkedIn doesn&#39;t give one for Sumbreak yet) shows &quot;solved&quot;.</li>
+<li>Today starts with <strong>Today&#39;s leaderboard</strong>: everyone who played one of today&#39;s games, all games together: played, wins, average rank and points (same rule as the Leaderboard). Click a column header to sort.</li>
 </ul>
 
     <details>
       <summary>Earlier versions</summary>
-      <h3>0.3.1</h3>
+      <h3>0.3.2</h3>
+<ul>
+<li>New game: <strong>Sumbreak</strong>. LinkedIn doesn&#39;t list it with the other games yet, so LGT adds it itself (one puzzle a day since #1 on 18 November).</li>
+<li>Your own result without a time (LinkedIn doesn&#39;t give one for Sumbreak yet) shows &quot;solved&quot;.</li>
+</ul>
+
+<h3>0.3.1</h3>
 <ul>
 <li>History: each game now has a Points column too (same rule as the Leaderboard, for that game only).</li>
 <li>History: Best and Average now work for Pinpoint (number of guesses instead of a time).</li>
@@ -158,10 +163,10 @@
 <h2>Using it</h2>
 <ul>
 <li>Click the toolbar icon to open the dashboard. LGT checks LinkedIn every 15 minutes while Firefox is open (⟳ checks right away).</li>
-<li><strong>Today</strong>: a card per game with your connections&#39; results for today&#39;s puzzle: rank, time and ✦ for a flawless solve (no hints, no mistakes). Your row is highlighted. Connections who didn&#39;t solve the puzzle show &quot;failed&quot;; those who haven&#39;t played yet are listed greyed out at the bottom. LinkedIn sometimes fills a leaderboard hours late (often Pinpoint and Crossclimb): until it lists you, your own result is shown anyway, with &quot;–&quot; instead of a rank.</li>
+<li><strong>Today</strong>: at the top, <strong>Today&#39;s leaderboard</strong>: everyone who played one of today&#39;s games, all games together (played, wins, average rank and points as in the Leaderboard). Below it, a card per game with your connections&#39; results for today&#39;s puzzle: rank, time and ✦ for a flawless solve (no hints, no mistakes). Your row is highlighted. Connections who didn&#39;t solve the puzzle show &quot;failed&quot;; those who haven&#39;t played yet are listed greyed out at the bottom. LinkedIn sometimes fills a leaderboard hours late (often Pinpoint and Crossclimb): until it lists you, your own result is shown anyway, with &quot;–&quot; instead of a rank.</li>
 <li><strong>History</strong>: pick a game to see the standings over all days LGT has seen (played, wins, average rank, best and average time (guesses for Pinpoint), and points as in the Leaderboard; failed and not-yet-ranked days count as played, but not for wins and rank) and every day&#39;s top 3 with your own result. History starts on the day you install LGT.</li>
 <li><strong>Leaderboard</strong>: everyone who ever played, over all games together: games played, wins, average rank and points. Points: in every game, 1 for each player you finished ahead of (a better rank, or they failed), plus 1 for a flawless solve (hover over &quot;Points&quot; for the rule).</li>
-<li>Click a column header in History or Leaderboard to sort by it, click again to reverse. History starts sorted by average rank, Leaderboard by points.</li>
+<li>Click a column header in Today&#39;s leaderboard, History or Leaderboard to sort by it, click again to reverse. History starts sorted by average rank, Leaderboard by points.</li>
 <li>LinkedIn may only show a game&#39;s connections leaderboard once you&#39;ve played that game yourself, so if a card stays empty, play it first.</li>
 <li><strong>Settings</strong> (⚙ in the dashboard): check interval, the hidden helper tab, and the public board.</li>
 <li><strong>Public board</strong>: publishes the rankings as an encrypted web page you can open in any browser, for example on your phone. Turn it on under Settings → Public board with a GitHub repository (with GitHub Pages turned on), a fine-grained token for it (Contents: Read and write) and a passphrase. The board page asks for the passphrase and can remember it on that device. Only the encrypted results and the page itself are uploaded, never your LinkedIn login, and the page shows initials instead of profile photos. Since friends read it, the board doesn&#39;t mark your own row or show your own result per day.</li>
