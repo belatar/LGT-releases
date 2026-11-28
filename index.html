@@ -39,13 +39,13 @@
       <img src="icon-96.png" alt="">
       <div>
         <h1>LGT</h1>
-        <p class="version">Version 0.4.0 · Firefox add-on</p>
+        <p class="version">Version 0.4.1 · Firefox add-on</p>
       </div>
     </header>
 
     <p>Tracks how your LinkedIn connections do in the daily LinkedIn games: a dashboard for today and a history per game. Unofficial, not affiliated with LinkedIn.</p>
 
-    <a class="install" href="lgt.xpi?v=0.4.0">Install in Firefox</a>
+    <a class="install" href="lgt.xpi?v=0.4.1">Install in Firefox</a>
     <p class="muted">Signed by Mozilla. Firefox updates it automatically after the first install.</p>
 
     <h2>Installing</h2>
@@ -58,14 +58,19 @@
     <h2>If that doesn't work</h2>
     <p>Right-click the button, choose <strong>Save Link As…</strong>, then drag the saved file onto a Firefox window, or use <code>about:addons</code> → gear icon → <strong>Install Add-on From File…</strong>.</p>
 
-    <h2>What's new in 0.4.0</h2>
+    <h2>What's new in 0.4.1</h2>
     <ul>
-<li>Today starts with <strong>Today&#39;s leaderboard</strong>: everyone who played one of today&#39;s games, all games together: played, wins, average rank and points (same rule as the Leaderboard). Click a column header to sort.</li>
+<li>NAS checker: <code>update.sh</code> repairs the container name when an update ran while DSM&#39;s Container Manager was open (the container was then called something like <code>cb66a8a7d1db_lgt</code>). <code>update.sh</code> lives on the NAS: replace it once (README → Troubleshooting).</li>
 </ul>
 
     <details>
       <summary>Earlier versions</summary>
-      <h3>0.3.2</h3>
+      <h3>0.4.0</h3>
+<ul>
+<li>Today starts with <strong>Today&#39;s leaderboard</strong>: everyone who played one of today&#39;s games, all games together: played, wins, average rank and points (same rule as the Leaderboard). Click a column header to sort.</li>
+</ul>
+
+<h3>0.3.2</h3>
 <ul>
 <li>New game: <strong>Sumbreak</strong>. LinkedIn doesn&#39;t list it with the other games yet, so LGT adds it itself (one puzzle a day since #1 on 18 November).</li>
 <li>Your own result without a time (LinkedIn doesn&#39;t give one for Sumbreak yet) shows &quot;solved&quot;.</li>
@@ -177,6 +182,7 @@
 <li><strong>&quot;You&#39;re not logged in to LinkedIn&quot;</strong>: log in at linkedin.com in the same Firefox profile (not in a private window or a different container), then press ⟳.</li>
 <li><strong>&quot;LinkedIn refused the request&quot;</strong>: open linkedin.com/games once (it can stay in a background tab), then press ⟳. With the hidden helper tab turned on, LGT does this by itself.</li>
 <li><strong>&quot;LinkedIn changed the … query&quot;</strong>: LinkedIn renamed a request. Find the new <code>queryId=…</code> in the browser&#39;s Network tab on linkedin.com/games and enter it under Settings → Advanced.</li>
+<li><strong>The checker container is called <code>cb66a8a7d1db_lgt</code> (some number, then <code>_lgt</code>) instead of <code>lgt</code></strong> (NAS checker): an update ran while DSM&#39;s Container Manager window was open, and Docker Compose couldn&#39;t give the new container its name back. The checker works normally. From 0.4.1, <code>update.sh</code> repairs this on its next run (its output says <code>Renamed the container … back to lgt.</code>). <code>update.sh</code> lives on the NAS, so a release doesn&#39;t replace it: download <code>server/update.sh</code> from this repository on github.com (<strong>Download raw file</strong>), upload it in DSM → <strong>File Station</strong> → <code>docker</code> → <code>lgt</code> → <strong>Upload</strong> → <strong>Upload - Overwrite</strong>, close Container Manager, then run the <code>LGT update</code> task once (Control Panel → <strong>Task Scheduler</strong> → select it → <strong>Run</strong>).</li>
 <li><strong>Board not published</strong>: the message in Settings → Public board says why, usually the token (needs Contents: Read and write on that repository) or an empty repository (add a README).</li>
 </ul>
 
